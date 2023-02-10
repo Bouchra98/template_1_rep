@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+    /* outline: none; */
+    /* border: none; */
+    text-decoration: none;
+    text-transform: capitalize;
+    /* transition: all .2s linear; */
+}
+
+ :root {
+    /* declaration of var */
+    --red: #ff3838
+}
+
+*::selection {
+    /* any where in the body when we select any thing ot will be in red */
+    background: var(--red);
+    color: #ffff;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+body {
+    background: #f7f7f7;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 1rem 3%;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, -1);
+}
+
+header .logo {
+    font-size: 2rem;
+    font-weight: bolder;
+    color: #24232366;
+}
+
+header .logo i {
+    padding: 0.5rem;
+    color: var(--red);
+}
+
+header .navbar a {
+    font-size: 2rem;
+    margin-left: 2rem;
+    color: #666;
+}
+
+header .navbar a:hover {
+    color: var(--red);
+}
+
+#menu-bar {
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: #666;
+    /* display: none; */
+    /* border: 1rem solid #666; */
+    /* border-radius: .3rem; */
+    padding: 1rem 1.5rem;
+}
+
+
+/* media queries */
+
+@media(max-width:991px) {
+    html {
+        font-size: 54%;
+    }
+    header {
+        padding: 1rem;
+    }
+}
+
+@media(max-width:768px) {
+    #menu-bar {
+        display: initial;
+    }
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #f7f7f7;
+        border-top: .1rem solid rgba(0, 0, 0, .1);
+    }
+    header .navbar a {
+        margin: 2rem;
+        padding: 1.5rem;
+        display: block;
+        border: 0.1rem solid rgba(0, 0, 0, .1);
+        border-left: .5rem solid var(--red);
+        background: #fff;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+}
+
+@media(max-width:400px) {
+    html {
+        font-size: 50%;
+    }
+    header {
+        padding: 1rem;
+    }
+}
